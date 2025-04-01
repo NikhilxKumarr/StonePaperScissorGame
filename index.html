@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stone Paper Scissor Game</title>
+   <link rel="stylesheet" href="Stone.css">
+    
+  </head>
+  <body>
+    <h1>Stone Paper Scissor Game</h1>
+
+    <button
+      class="buttons"
+      onclick="
+        GenComChoice();
+        result = GetResult('Stone', computerchoice);
+        console.log('You have chosen Stone');
+        ShowResult('Stone', computerchoice, result);
+        
+      "
+    >
+      <img src="stone.jpg" alt="stone" class="choice-image">
+    </button>
+    <button
+      class="buttons"
+      onclick="
+        GenComChoice();
+        result = GetResult('Paper', computerchoice);
+        console.log('You have chosen Paper');
+        ShowResult('Paper', computerchoice, result);
+      "
+    >
+      <img src="paper.jpg" alt="paper" class="choice-image">
+    </button>
+    <button
+      class="buttons"
+      onclick="
+        GenComChoice();
+        let result = GetResult('Scissor', computerchoice);
+        console.log('You have chosen Scissor');
+        ShowResult('Scissor', computerchoice, result);
+      "
+    >
+      <img src="scissor.jpg" alt="scissor" class="choice-image">
+    </button>
+
+    <div id="scoreboard">
+      <p>Wins: <span id="wins">0</span></p>
+      <p>Losses: <span id="losses">0</span></p>
+      <p>Ties: <span id="ties">0</span></p>
+    </div>
+
+    <div id="game-result"></div>
+    <div id="chosen-images"></div>
+
+    <button onclick="resetGame()" class="resetb">Reset</button>
+
+    <script src="scirpt.js">
+      
+    </script>
+
+  </body>
+</html>
